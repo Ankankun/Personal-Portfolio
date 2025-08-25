@@ -117,10 +117,10 @@ const Experience = () => {
                 <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
                   <div className="pl-8 relative">
                     <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
-                    <p className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center">
-                      {cert.name}
+                    <div className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center">
+                      <span>{cert.name}</span>
                       <ExternalLink className="ml-2 h-4 w-4 shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
-                    </p>
+                    </div>
                     <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                   </div>
                 </a>
