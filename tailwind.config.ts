@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        headline: ['Merriweather', 'serif'],
         code: ['monospace'],
       },
       colors: {
@@ -28,6 +28,7 @@ export default {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          '600': '#dc4f2a',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -67,9 +68,13 @@ export default {
         },
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: '1rem',
+        md: '0.75rem',
+        sm: '0.375rem',
+      },
+      boxShadow: {
+        sm: '0 1px 2px rgba(0,0,0,0.05)',
+        md: '0 4px 8px -2px rgba(0,0,0,0.1)',
       },
       keyframes: {
         'accordion-down': {
