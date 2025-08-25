@@ -8,7 +8,7 @@ const Hero = () => {
           Hi, I'm Ankan.
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
-          I'm learning and building toward full‑stack development. Every project is a step forward in my journey. I'm passionate about creating meaningful digital experiences and constantly expanding my technical toolkit.
+          I build accessible, clean interfaces and evolve them into data‑aware applications. Every project is a step forward in my journey to becoming a full-stack developer.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg" className="transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md">

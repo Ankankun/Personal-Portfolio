@@ -5,35 +5,46 @@ const experienceData = {
   education: [
     {
       degree: "B.Tech in Computer Science & Engineering",
-      institution: "JIS College of Engineering, Kalyani (MAKAUT)",
-      duration: "2021 – 2025",
-      details: "CGPA: 9.01 (till 5th sem)"
+      institution: "Techno International Batanagar",
+      duration: "2022 – 2026",
+      details: "CGPA: 7.66 (current)"
     },
     {
       degree: "Higher Secondary (Class 12)",
-      institution: "Kanchrapara Harnett High School",
-      duration: "2021",
-      details: "Percentage: 86.8%"
+      institution: "National Public School",
+      duration: "2020 - 2021",
+      details: "Percentage: 76%"
+    },
+    {
+      degree: "Secondary (Class 10)",
+      institution: "Durgapur Public School",
+      duration: "2018 - 2019",
+      details: "Percentage: 79%"
     },
   ],
   experience: [
     {
-      role: "Web Development & Designing Intern",
-      company: "The Sparks Foundation",
-      duration: "June 2023 - July 2023",
-      details: "Developed a Basic Banking System website enabling transactions between dummy users, focusing on frontend and backend integration."
+      role: "Web Development Intern",
+      company: "Pinnacle Labs (Remote)",
+      duration: "July 2025 - Aug 2025",
+      details: "Building mini front-end deliverables, applying accessibility, publishing weekly progress updates, and incorporating mentor feedback."
     }
   ],
   certifications: [
     {
-      name: "Programming in Java",
-      issuer: "NPTEL",
-      link: "#"
+      name: "Python",
+      issuer: "HackerRank",
+      link: "https://www.hackerrank.com/certificates/cdacda9e3a71"
     },
     {
-      name: "The Complete 2023 Web Development Bootcamp",
-      issuer: "Udemy",
-      link: "#"
+      name: "SQL (Basic)",
+      issuer: "HackerRank",
+      link: "https://www.hackerrank.com/certificates/e1592a567060"
+    },
+    {
+      name: "Web Development (HTML, CSS & JS)",
+      issuer: "Coursera",
+      link: "https://www.coursera.org/account/accomplishments/verify/ALKC81GXILRR"
     }
   ]
 };
@@ -61,7 +72,7 @@ const Experience = () => {
             <CardHeader>
               <div className="flex items-center gap-4">
                 <SectionIcon icon={GraduationCap} />
-                <CardTitle className="font-headline">Education</CardTitle>
+                <CardTitle className="font-headline text-lg">Education</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-8">
@@ -85,7 +96,7 @@ const Experience = () => {
             <CardHeader>
               <div className="flex items-center gap-4">
                 <SectionIcon icon={Briefcase} />
-                <CardTitle className="font-headline">Experience</CardTitle>
+                <CardTitle className="font-headline text-lg">Experience</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-8">
@@ -109,7 +120,7 @@ const Experience = () => {
             <CardHeader>
               <div className="flex items-center gap-4">
                 <SectionIcon icon={Award} />
-                <CardTitle className="font-headline">Certifications</CardTitle>
+                <CardTitle className="font-headline text-lg">Certifications</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">

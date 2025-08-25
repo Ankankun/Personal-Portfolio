@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 const Footer = () => {
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/ankan-das', icon: Github },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Email', href: 'mailto:example@email.com', icon: Mail },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ankan-das-/', icon: Linkedin },
+    { name: 'Email', href: 'mailto:ankandaskelly@gmail.com', icon: Mail },
   ];
 
   return (

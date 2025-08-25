@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Ankan Das – Portfolio',
-  description: 'Projects, learning log, and journey milestones of aspiring full stack developer Ankan Das.',
+  title: 'Ankan Das – Junior Web Developer',
+  description: 'Portfolio of Ankan Das, an aspiring web developer building accessible, clean interfaces and data-aware applications.',
   themeColor: '#ef6c4d',
 };
 

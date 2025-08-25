@@ -15,8 +15,8 @@ export const projects: Project[] = [
     id: "1",
     title: "Booknest (Library Management System)",
     description: "Desktop app built with Python and CustomTkinter for managing books and borrowing. Features ISBN auto-fetch from Open Library API, full CRUD operations, issue/return/re-issue flow, and MySQL persistence.",
-    techStack: ["Python","CustomTkinter","MySQL","Open Library API"],
-    learnings: "Desktop GUI development, API integration, relational schema design, workflow modeling.",
+    techStack: ["Python", "CustomTkinter", "MySQL", "Open Library API"],
+    learnings: "Learned about desktop GUI development, API integration for data enrichment, designing a relational database schema, and modeling real-world workflows like book checkouts and returns.",
     repository: "https://github.com/ankan-das/booknest",
     category: "Major",
     status: "Ongoing"
@@ -24,9 +24,9 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "PharmaStock",
-    description: "Early web prototype for pharmacy inventory tracking built with HTML, CSS, and JavaScript. Planned features: low-stock alerts, vendor management, auth, dashboards, CSV import/export.",
-    techStack: ["HTML5","CSS3","JavaScript","Planned: Node.js/FastAPI","Database"],
-    learnings: "Inventory workflows, scalable architecture planning, data-heavy UI design.",
+    description: "An early web prototype for pharmacy inventory tracking built with HTML, CSS, and JavaScript. The vision includes features like low-stock alerts, vendor management, and data import/export.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "FastAPI (planned)", "Database"],
+    learnings: "This project is an exercise in planning for scale. I'm focusing on designing robust inventory workflows, considering data-heavy UI challenges, and architecting for a future backend integration.",
     repository: "https://github.com/ankan-das/pharmastock",
     category: "Major",
     status: "Ongoing"
@@ -34,9 +34,9 @@ export const projects: Project[] = [
   {
     id: "3",
     title: "Modern Web Calculator",
-    description: "Vanilla JavaScript calculator with keyboard support, chained operations, precision handling, ripple effects, focus feedback, and divide-by-zero protection.",
-    techStack: ["HTML5","CSS3","Vanilla JavaScript"],
-    learnings: "Numeric precision, keyboard event management, accessibility, and interaction design.",
+    description: "A vanilla JavaScript calculator with keyboard support, chained operations, and robust error handling like divide-by-zero protection. The UI includes modern touches like ripple effects on click.",
+    techStack: ["HTML5", "CSS3", "Vanilla JavaScript"],
+    learnings: "This project was a deep dive into core JavaScript, focusing on handling numeric precision, complex state management for chained operations, keyboard event handling, and accessibility.",
     liveDemo: "https://ankan-das.github.io/calculator",
     repository: "https://github.com/ankan-das/calculator",
     category: "Minor",
@@ -45,9 +45,9 @@ export const projects: Project[] = [
   {
     id: "4",
     title: "Frontend Component Gallery",
-    description: "Collection of small UI builds (Blog Preview Card, Social Links Profile, QR Code Component, Recipe Page, Cafe Menu) highlighting semantic HTML + responsive layout patterns.",
-    techStack: ["HTML5","CSS3","JavaScript","Responsive Design"],
-    learnings: "Semantic structure, responsive techniques, accessibility patterns, and reusable CSS.",
+    description: "A collection of small UI builds (like a Blog Preview Card and Social Links Profile) that highlight semantic HTML and responsive CSS patterns for creating common web components.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    learnings: "Focused on fundamentals: writing clean, semantic markup, mastering responsive techniques without frameworks, implementing accessibility patterns, and organizing reusable CSS.",
     liveDemo: "https://ankan-das.github.io/frontend-components",
     repository: "https://github.com/ankan-das/frontend-components",
     category: "Minor",
@@ -67,10 +67,11 @@ export interface LogEntry {
 }
 
 export const logEntries: LogEntry[] = [
-  { id: "1", date: "2024-01-15", title: "Desktop GUI with CustomTkinter", description: "Learned how to create modern-looking desktop applications with Python.", tags: ["Python","GUI","CustomTkinter"], category: "Frontend" },
-  { id: "2", date: "2024-01-10", title: "API Integration Best Practices", description: "Handled errors, rate limiting, and graceful failures.", tags: ["API","Python","Error Handling"], category: "Backend" },
-  { id: "3", date: "2024-01-05", title: "Semantic HTML and Accessibility", description: "Studied heading hierarchy, focus management, and screen reader interaction.", tags: ["HTML","Accessibility","Semantics"], category: "Frontend" },
-  { id: "4", date: "2023-12-20", title: "MySQL Schema Design", description: "Focused on foreign keys, normalization, and efficient queries.", tags: ["MySQL","Database","Schema"], category: "Backend" }
+  { id: "1", date: "2024-03-20", title: "JavaScript DOM Manipulation", description: "Deepened my understanding of state management and event handling in vanilla JS for interactive UIs.", tags: ["JavaScript", "DOM", "State"], category: "Frontend" },
+  { id: "2", date: "2024-03-15", title: "Responsive & Semantic Layouts", description: "Practiced building responsive layouts using Flexbox and CSS Grid, with a focus on semantic HTML for accessibility.", tags: ["HTML", "CSS", "Accessibility"], category: "Frontend" },
+  { id: "3", date: "2024-02-25", title: "Python for Tooling", description: "Explored using Python for scripting and building simple desktop applications with CustomTkinter.", tags: ["Python", "GUI", "Scripts"], category: "Tools" },
+  { id: "4", date: "2024-02-10", title: "Database Schema Fundamentals", description: "Learned the basics of relational database design and writing queries with MySQL.", tags: ["MySQL", "Schema", "SQL"], category: "Database" },
+  { id: "5", date: "2024-01-20", title: "Version Control with Git", description: "Mastered core Git commands and workflows using GitHub Pages to host projects.", tags: ["Git", "GitHub", "CI/CD"], category: "Tools" }
 ];
 
 export const logFilters = ["All","Frontend","Backend","Database","Tools"];
