@@ -47,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </CardContent>
       <CardFooter className="flex gap-4">
         {project.liveDemo && (
-          <Button asChild variant="outline" size="sm">
+          <Button asChild variant="outline" size="sm" className="transition-transform duration-150 hover:-translate-y-0.5">
             <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" />
               Live Demo
@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </Button>
         )}
         {project.repository && (
-          <Button asChild variant="outline" size="sm">
+          <Button asChild variant="outline" size="sm" className="transition-transform duration-150 hover:-translate-y-0.5">
             <a href={project.repository} target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" />
               Repository
