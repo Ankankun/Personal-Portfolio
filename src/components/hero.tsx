@@ -14,7 +14,7 @@ const Hero = () => {
           <Button asChild size="lg" className="transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md">
             <a href="#projects">View My Work</a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-sm">
+          <Button asChild size="lg" variant="outline" className="transition-transform duration-150 hover:-translate-y-0.5">
             <a href="/resume.pdf" download>My Resume</a>
           </Button>
         </div>
