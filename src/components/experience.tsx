@@ -39,7 +39,7 @@ const experienceData = {
 };
 
 const SectionIcon = ({ icon: Icon }: { icon: React.ElementType }) => (
-  <div className="bg-primary/10 p-2 rounded-md inline-block mb-4">
+  <div className="bg-primary/10 p-2 rounded-md">
     <Icon className="h-6 w-6 text-primary" />
   </div>
 );
@@ -59,18 +59,20 @@ const Experience = () => {
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-3">
           <Card>
             <CardHeader>
-              <SectionIcon icon={GraduationCap} />
-              <CardTitle className="font-headline">Education</CardTitle>
+              <div className="flex items-center gap-4">
+                <SectionIcon icon={GraduationCap} />
+                <CardTitle className="font-headline">Education</CardTitle>
+              </div>
             </CardHeader>
             <CardContent className="space-y-8">
               {experienceData.education.map((edu, index) => (
-                <div key={index} className="group relative">
+                <div key={index} className="group relative pl-8">
+                  <div className="absolute left-0 top-1.5 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
                   <div className="flex items-center gap-2 text-sm text-stone-500 mb-2">
                     <CalendarDays className="h-4 w-4" />
                     <span>{edu.duration}</span>
                   </div>
-                  <div className="pl-6">
-                    <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                  <div>
                     <p className="font-semibold text-foreground">{edu.degree}</p>
                     <p className="text-sm text-muted-foreground">{edu.institution}</p>
                     <p className="text-sm text-stone-500">{edu.details}</p>
@@ -81,18 +83,20 @@ const Experience = () => {
           </Card>
           <Card>
             <CardHeader>
-              <SectionIcon icon={Briefcase} />
-              <CardTitle className="font-headline">Experience</CardTitle>
+              <div className="flex items-center gap-4">
+                <SectionIcon icon={Briefcase} />
+                <CardTitle className="font-headline">Experience</CardTitle>
+              </div>
             </CardHeader>
             <CardContent className="space-y-8">
             {experienceData.experience.map((exp, index) => (
-                <div key={index} className="group relative">
+                <div key={index} className="group relative pl-8">
+                  <div className="absolute left-0 top-1.5 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
                   <div className="flex items-center gap-2 text-sm text-stone-500 mb-2">
                     <CalendarDays className="h-4 w-4" />
                     <span>{exp.duration}</span>
                   </div>
-                  <div className="pl-6">
-                    <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                  <div>
                     <p className="font-semibold text-foreground">{exp.role}</p>
                     <p className="text-sm text-muted-foreground">{exp.company}</p>
                     <p className="text-sm text-muted-foreground mt-1">{exp.details}</p>
@@ -103,13 +107,15 @@ const Experience = () => {
           </Card>
           <Card>
             <CardHeader>
-              <SectionIcon icon={Award} />
-              <CardTitle className="font-headline">Certifications</CardTitle>
+              <div className="flex items-center gap-4">
+                <SectionIcon icon={Award} />
+                <CardTitle className="font-headline">Certifications</CardTitle>
+              </div>
             </CardHeader>
             <CardContent className="space-y-4">
             {experienceData.certifications.map((cert, index) => (
                 <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
-                  <div className="pl-6 relative">
+                  <div className="pl-8 relative">
                     <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
                     <p className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center">
                       {cert.name}
