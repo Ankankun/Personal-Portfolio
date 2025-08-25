@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, GraduationCap, Briefcase, Award } from "lucide-react";
 
 const experienceData = {
   education: [
@@ -38,6 +38,12 @@ const experienceData = {
   ]
 };
 
+const SectionIcon = ({ icon: Icon }: { icon: React.ElementType }) => (
+  <div className="bg-primary/10 p-2 rounded-md inline-block mb-4">
+    <Icon className="h-6 w-6 text-primary" />
+  </div>
+);
+
 const Experience = () => {
   return (
     <section id="experience" className="py-16 sm:py-24">
@@ -53,16 +59,16 @@ const Experience = () => {
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-3">
           <Card>
             <CardHeader>
+              <SectionIcon icon={GraduationCap} />
               <CardTitle className="font-headline">Education</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-8">
               {experienceData.education.map((edu, index) => (
-                <div key={index} className="group relative pl-8">
-                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary"></div>
-                  <div className="absolute left-[-2px] top-1 h-1.5 w-1.5 rounded-full bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                <div key={index} className="group relative pl-6">
+                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                  <p className="text-sm text-stone-500 mb-1">{edu.duration}</p>
                   <p className="font-semibold text-foreground">{edu.degree}</p>
                   <p className="text-sm text-muted-foreground">{edu.institution}</p>
-                  <p className="text-sm text-stone-500">{edu.duration}</p>
                   <p className="text-sm text-stone-500">{edu.details}</p>
                 </div>
               ))}
@@ -70,16 +76,16 @@ const Experience = () => {
           </Card>
           <Card>
             <CardHeader>
+              <SectionIcon icon={Briefcase} />
               <CardTitle className="font-headline">Experience</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-8">
             {experienceData.experience.map((exp, index) => (
-                <div key={index} className="group relative pl-8">
-                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary"></div>
-                  <div className="absolute left-[-2px] top-1 h-1.5 w-1.5 rounded-full bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                <div key={index} className="group relative pl-6">
+                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                  <p className="text-sm text-stone-500 mb-1">{exp.duration}</p>
                   <p className="font-semibold text-foreground">{exp.role}</p>
                   <p className="text-sm text-muted-foreground">{exp.company}</p>
-                  <p className="text-sm text-stone-500">{exp.duration}</p>
                   <p className="text-sm text-muted-foreground mt-1">{exp.details}</p>
                 </div>
               ))}
@@ -87,13 +93,13 @@ const Experience = () => {
           </Card>
           <Card>
             <CardHeader>
+              <SectionIcon icon={Award} />
               <CardTitle className="font-headline">Certifications</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-8">
             {experienceData.certifications.map((cert, index) => (
-                <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="block group relative pl-8">
-                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary"></div>
-                  <div className="absolute left-[-2px] top-1 h-1.5 w-1.5 rounded-full bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="block group relative pl-6">
+                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
                   <p className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center">
                     {cert.name}
                     <ExternalLink className="ml-2 h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
