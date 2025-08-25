@@ -12,7 +12,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
-  regid: z.string().optional(),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
@@ -25,7 +24,6 @@ const Contact = () => {
     defaultValues: {
       name: '',
       email: '',
-      regid: '',
       message: '',
     },
   });
@@ -83,19 +81,6 @@ const Contact = () => {
                     )}
                   />
                 </div>
-                <FormField
-                    control={form.control}
-                    name="regid"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-stone-300">Registration ID (Optional)</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your ID" {...field} className="bg-stone-900 border-stone-600 text-white focus-visible:ring-offset-stone-900" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
                 <FormField
                   control={form.control}
                   name="message"
