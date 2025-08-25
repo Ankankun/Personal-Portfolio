@@ -27,8 +27,10 @@ const Header = () => {
     )}>
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#" className="flex items-center gap-2 text-xl font-bold text-foreground">
-            <span className="bg-primary text-primary-foreground font-code rounded-md h-7 w-7 flex items-center justify-center text-lg font-bold">A</span>
-            <span className="font-headline">nkankun</span>
+            <span className="font-headline text-2xl tracking-tight">
+                <span className="text-primary">Ankan</span>
+                <span>kun</span>
+            </span>
         </a>
         <nav className="hidden md:flex">
           <ul className="flex items-center space-x-6 text-sm font-semibold">
