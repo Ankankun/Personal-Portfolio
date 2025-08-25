@@ -5,7 +5,7 @@ const experienceData = {
   education: [
     {
       degree: "B.Tech in Computer Science & Engineering",
-      institution: "Techno International Batanagar",
+      institution: "Techno International Batanagar (MAKAUT)",
       duration: "2022 – 2026",
       details: "CGPA: 7.66 (current)"
     },
@@ -13,13 +13,13 @@ const experienceData = {
       degree: "Higher Secondary (Class 12)",
       institution: "National Public School",
       duration: "2020 - 2021",
-      details: "Percentage: 76%"
+      details: "CISCE"
     },
     {
       degree: "Secondary (Class 10)",
       institution: "Durgapur Public School",
       duration: "2018 - 2019",
-      details: "Percentage: 79%"
+      details: "CBSE"
     },
   ],
   experience: [
@@ -128,7 +128,7 @@ const Experience = () => {
                 <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
                   <div className="pl-8 relative">
                     <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
-                    <div className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-start">
+                    <div className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center">
                       <span className="flex-1">{cert.name}</span>
                       <ExternalLink className="ml-2 h-4 w-4 shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
