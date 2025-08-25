@@ -7,7 +7,7 @@ const experienceData = {
       degree: "B.Tech in Computer Science & Engineering",
       institution: "Techno International Batanagar (MAKAUT)",
       duration: "2022 – 2026",
-      details: "CGPA: 7.66 (current)"
+      details: "CGPA: 7.79 (current)"
     },
     {
       degree: "Higher Secondary (Class 12)",
