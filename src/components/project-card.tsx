@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import type { Project } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface ProjectCardProps {
   project: Project;
@@ -35,10 +36,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             ))}
             </div>
         </div>
-        <div>
-            <p className="text-sm font-semibold text-foreground mb-2">What I Learned</p>
-            <p className="text-sm text-muted-foreground">{project.learnings}</p>
-        </div>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1" className="border-b-0">
+            <AccordionTrigger className="text-sm font-semibold text-foreground hover:no-underline py-0">What I Learned</AccordionTrigger>
+            <AccordionContent className="text-sm text-muted-foreground pt-2">
+              {project.learnings}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </CardContent>
       <CardFooter className="flex gap-4">
         {project.liveDemo && (

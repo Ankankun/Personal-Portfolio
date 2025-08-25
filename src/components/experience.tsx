@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { ExternalLink, GraduationCap, Briefcase, Award } from "lucide-react";
+import { ExternalLink, GraduationCap, Briefcase, Award, CalendarDays } from "lucide-react";
 
 const experienceData = {
   education: [
@@ -64,12 +64,17 @@ const Experience = () => {
             </CardHeader>
             <CardContent className="space-y-8">
               {experienceData.education.map((edu, index) => (
-                <div key={index} className="group relative pl-6">
-                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
-                  <p className="text-sm text-stone-500 mb-1">{edu.duration}</p>
-                  <p className="font-semibold text-foreground">{edu.degree}</p>
-                  <p className="text-sm text-muted-foreground">{edu.institution}</p>
-                  <p className="text-sm text-stone-500">{edu.details}</p>
+                <div key={index} className="group relative">
+                  <div className="flex items-center gap-2 text-sm text-stone-500 mb-2">
+                    <CalendarDays className="h-4 w-4" />
+                    <span>{edu.duration}</span>
+                  </div>
+                  <div className="pl-6">
+                    <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                    <p className="font-semibold text-foreground">{edu.degree}</p>
+                    <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                    <p className="text-sm text-stone-500">{edu.details}</p>
+                  </div>
                 </div>
               ))}
             </CardContent>
@@ -81,12 +86,17 @@ const Experience = () => {
             </CardHeader>
             <CardContent className="space-y-8">
             {experienceData.experience.map((exp, index) => (
-                <div key={index} className="group relative pl-6">
-                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
-                  <p className="text-sm text-stone-500 mb-1">{exp.duration}</p>
-                  <p className="font-semibold text-foreground">{exp.role}</p>
-                  <p className="text-sm text-muted-foreground">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{exp.details}</p>
+                <div key={index} className="group relative">
+                  <div className="flex items-center gap-2 text-sm text-stone-500 mb-2">
+                    <CalendarDays className="h-4 w-4" />
+                    <span>{exp.duration}</span>
+                  </div>
+                  <div className="pl-6">
+                    <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                    <p className="font-semibold text-foreground">{exp.role}</p>
+                    <p className="text-sm text-muted-foreground">{exp.company}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{exp.details}</p>
+                  </div>
                 </div>
               ))}
             </CardContent>
@@ -96,15 +106,17 @@ const Experience = () => {
               <SectionIcon icon={Award} />
               <CardTitle className="font-headline">Certifications</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-8">
+            <CardContent className="space-y-4">
             {experienceData.certifications.map((cert, index) => (
-                <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="block group relative pl-6">
-                  <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
-                  <p className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center">
-                    {cert.name}
-                    <ExternalLink className="ml-2 h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                  </p>
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
+                  <div className="pl-6 relative">
+                    <div className="absolute left-0 top-1 h-full w-px bg-border transition-colors group-hover:bg-primary group-hover:shadow-[0_0_8px_0px_hsl(var(--primary))]"></div>
+                    <p className="font-semibold text-foreground group-hover:text-primary transition-colors flex items-center">
+                      {cert.name}
+                      <ExternalLink className="ml-2 h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </p>
+                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  </div>
                 </a>
               ))}
             </CardContent>
