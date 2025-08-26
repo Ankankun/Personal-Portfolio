@@ -1,11 +1,11 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/ankan-das', icon: Github },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ankan-das-/', icon: Linkedin },
-    { name: 'Email', href: 'mailto:ankandaskelly@gmail.com', icon: Mail },
+    { name: "GitHub", href: "https://github.com/Ankankun", icon: Github },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/ankankun/", icon: Linkedin },
+    { name: "Email", href: "mailto:ankankun01@gmail.com", icon: Mail },
   ];
 
   return (
@@ -18,8 +18,19 @@ const Footer = () => {
           </div>
           <div className="flex gap-2">
             {socialLinks.map((link) => (
-              <Button key={link.name} asChild variant="ghost" size="icon" className="bg-stone-800 hover:bg-stone-700 text-stone-400 hover:text-white rounded-md">
-                <a href={link.href} aria-label={link.name} target="_blank" rel="noopener noreferrer">
+              <Button
+                key={link.name}
+                asChild
+                variant="ghost"
+                size="icon"
+                className="bg-stone-800 hover:bg-stone-700 text-stone-400 hover:text-white rounded-md"
+              >
+                <a
+                  href={link.href}
+                  aria-label={link.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <link.icon className="h-5 w-5" />
                 </a>
               </Button>
@@ -27,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-stone-800 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Ankan Das. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ankankun. All rights reserved.</p>
         </div>
       </div>
     </footer>
